@@ -26,6 +26,7 @@
   ],
   "scripts": {
     "start": "npm run db:migrate && eggctl start --port=9200 --title=egg-server-datahub --workers=1",
+    "start:railway": "npm run db:migrate && eggctl start --port=$PORT --title=egg-server-datahub --workers=1",
     "stop": "eggctl stop --title=egg-server-datahub",
     "start:use-config": "./bin/datahub.js server -c ./macaca-datahub.config.js --verbose",
     "dev:server": "npm run db:migrate && cross-env ENABLE_JAVASCRIPT=Y ENABLE_REQUEST_PROXY=Y egg-bin dev",
